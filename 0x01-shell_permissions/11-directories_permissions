@@ -1,0 +1,2 @@
+#!/bin/bash
+find . -ytpe d -exec chmod u_x g+x o+x {}
