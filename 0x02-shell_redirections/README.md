@@ -1,1 +1,1 @@
-My ALX shell redirection project
+Create a script that displays the 10 newest files in the current directory.
