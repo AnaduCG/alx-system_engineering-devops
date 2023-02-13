@@ -1,2 +1,2 @@
 #!/bin/basih
-ls| sort -M
+ls -t | head
