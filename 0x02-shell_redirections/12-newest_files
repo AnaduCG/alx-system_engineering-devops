@@ -1,2 +1,2 @@
 #!/bin/basih
-ls -t1 | head
+ls -lt --sort=time | head -n 10
