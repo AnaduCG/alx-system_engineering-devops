@@ -1,2 +1,2 @@
 #1/bin/bash
-printf "$((POWER / DIVIDE)\n"
+echo "$(($POWER / $DIVIDE)"
