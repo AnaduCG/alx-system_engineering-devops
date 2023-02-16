@@ -1,0 +1,9 @@
+#!/bin/bash
+echo "Enter commit message"
+read commit_mes
+function execute(){
+git status
+git add .
+git commit -m '$commit_mes'
+}
+execute
