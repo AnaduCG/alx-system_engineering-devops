@@ -1,13 +1,13 @@
 #!/bin/bash
 echo "Enter commit message"
 read commit_mes
-echo "Which branch"
-read branch
 
 function execute(){
 git status
 git add .
 git commit -m '$commit_mes'
+echo "Which branch"
+read branch
 git push origin $branch
 }
 execute
