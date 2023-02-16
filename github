@@ -1,13 +1,39 @@
 #!/bin/bash
-echo "Enter commit message"
-read commit_mes
+echo "commit, status"
 
-function execute(){
-git status
-git add .
-git commit -m '$commit_mes'
-echo "Which branch"
-read branch
-git push origin $branch
+
+echo "Which git action"
+read action
+
+function begin(){
+case $action in
+	"commit")
+		commit_func ;;
+	"status")
+		status_func;;
+	*)
+		echo "Command not found";;
+esac
 }
-execute
+
+function commit_func (){
+	
+	echo "Filles to commit"
+	read files
+	
+	git add $files
+	
+	read -p "Enter commit message" commit_mes
+	
+	git commit -m '$commit_mes'
+	
+	echo "Which branch"
+	read branch
+	
+	git push origin $branch
+}
+
+function status_func(){
+	git status
+}
+begin
